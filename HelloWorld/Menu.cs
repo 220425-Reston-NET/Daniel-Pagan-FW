@@ -8,11 +8,10 @@ public class Menu
     }
     private int _mousePrice;
     private int _keyboardPrice;
-
     private int _phonePrice;
+    //Another was to make a property what doesn't require a field attached to it
     public int LaptopPrice { get; set; }
-
-    private int _totalPrice;
+    private int _totalPrice; //Saving the total proce of what the user saved
     public int totalPrice
     {
         get{ return _totalPrice;}
@@ -48,6 +47,18 @@ public class Menu
         if (answer == "1")
         {
             _totalPrice += _mousePrice;
+        }
+        else if (answer == "2")
+        {
+            _totalPrice += _keyboardPrice;
+        }
+        else if (answer == "3")
+        {
+            _totalPrice += _phonePrice;
+        }
+        else if (answer == "4")
+        {
+            _totalPrice += LaptopPrice;
         }
         Console.WriteLine("Your current total is: " + _totalPrice);
     }

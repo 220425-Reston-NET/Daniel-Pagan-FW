@@ -5,8 +5,11 @@ public class Car
     //This is a field
     //It is used to store information or define the current state of the object
     //By default, all field should be private
+    //Private means that only the class itself has access to it
     private string _color;
+    //String is used for words/sentences
     private string _owner;
+    //Int is used for whole numbers
     private int _fuel;
     private int _gallonPerMile;
     
@@ -27,6 +30,7 @@ public class Car
 
     //Methods can also have parameters
     //Parameters are implemented by adding in datatypes inside of the parenthesis
+    //The comma is used if a method needs more than 1 parameter
     public void Sum(int num1, int num2)
     {
         Console.WriteLine(num1+num2);
@@ -34,7 +38,7 @@ public class Car
 
     //This is a constructor
     //It is a special method that will run whenever you create an object
-
+    //Mostly used to instantiate/ set value to your fields or property
     public Car()
     {
         _color = "Blue";
@@ -44,6 +48,7 @@ public class Car
     
     }
 
+    //You can have more than 1 constructor and the parameter is used to pass information and change the data of the field
     public Car(string p_owner)
     {
         _owner = p_owner;
@@ -76,4 +81,9 @@ public class Car
             }
         }
     }
+
+    //You can make properties that will act like fields by formatting your property to look like this
+    //adding the private keyword next to get will make the property set only
+    //adding the private keyword next to set will make the property get only
+    public string Brand { get; set; }
 }
