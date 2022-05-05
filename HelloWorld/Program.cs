@@ -1,9 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Day4;
 using Day5;
+using ModelHaven;
 
-Console.Clear(); //Will clear the console 
 Console.WriteLine("Hello, World!");//Will write something in the terminal
+
 
 //[Class name] [NameOfObject] = new [CLass name]();
 Car carObj1 = new Car();
@@ -27,29 +28,45 @@ Console.WriteLine(carObj2.Owner);
 carObj2.Fuel = -100;
 Console.WriteLine(carObj2.Fuel);
 
-//Menu Deme
-Menu menuObj = new Menu();
-//bool repeat = true;
+Car.Registration = true;
+
+carObj1.GetRegistration();
+carObj2.GetRegistration();
+
+Car.Registration = false;
+
+carObj1.GetRegistration();
+carObj2.GetRegistration();
+
+//Menu Demo
+MainMenu menu = new MainMenu();
+// bool repeat = true;
 
 //Console.WriteLine("Hello! What is your name?");
 //menuObj.Name = Console.ReadLine();
 
-//while (repeat)
+// while (repeat)
 // {
-//      menuObj.GreetUser();
-//      string answer = Console.ReadLine();
-//      if (answer == "1")
+//      menu.Display();
+//      string ans = menu.Yourchoice();
+
+//      if (ans == "MainMenu")
 //      {
-//          menuObj.BuyItem();
+         
 //      } 
-//      else if (answer == "2")
+//      else if (ans == "Select a model")
 //      {
-//          Console.Writeline("Your total price is " + menuObj.TotalPrice);
+
+//      }
+//      else if (ans == "Exit")
+//      {
 //          repeat = false;
 //      } 
+//         //  Console.Writeline("Your total price is " + menu.TotalPrice);
+//         //  repeat = false;
 // } 
 
-ModelHaven modelHavenObj = new ModelHaven();
+// ModelHaven modelHavenObj = new ModelHaven();
 
 Dictionary<string, int> _StoreMenu = new Dictionary<string, int>();
 
@@ -59,4 +76,23 @@ collectObj.CollectionsMain();
 
 Conversions.ConversionsMain();
 
-Data.DataMain();
+// Data.DataMain();
+
+Serialization serialObj = new Serialization();
+serialObj.SerializationMain();
+
+Console.WriteLine("===OOP Demo===");
+Dog dogobj = new Dog();
+dogobj.Name = "Minnie";
+dogobj.Talk();
+dogobj.Run();
+dogobj.Talk("Barking");
+dogobj.Breed = "Chihuahua";
+
+Animal aniobj = new Animal();
+aniobj.Name = "McCoy";
+//aniobj.Breed doesn't work because inheritance only works one way. Only the dog
+aniobj.Health();
+
+IAnimal aniobj2 = new Animal();
+aniobj2.Health();

@@ -88,10 +88,10 @@ public class Collections
         _numbersHash.Add(10);  
         _numbersHash.Add(100);
 
-        // Console.WriteLine("===Dictionary Demo===");
-        // _personAge.Add("Chadel", 26);
-        // _personAge.Add("Troy", 31);
-        // _personAge.Add("Maaz", 24);
+        Console.WriteLine("===Dictionary Demo===");
+        _personAge.Add("Chadel", 26);
+        _personAge.Add("Troy", 31);
+        _personAge.Add("Maaz", 24);
        
         Console.WriteLine(_personAge["Troy"]);
 
@@ -105,7 +105,7 @@ public class Collections
         {
             Console.WriteLine(item);
         }
-    
+        
            
     }
 
